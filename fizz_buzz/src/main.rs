@@ -28,10 +28,25 @@ fn fizz_buzz(x: i32) -> String {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
+    use crate::fizz_buzz;
 
     #[test]
     fn fizz() {
         assert_eq!("Fizz", fizz_buzz(3));
+    }
+
+    #[test]
+    fn buzz() {
+        assert_eq!("Buzz", fizz_buzz(5));
+    }
+
+    #[test]
+    fn fizzbuzz() {
+        assert_eq!("FizzBuzz", fizz_buzz(15));
+    }
+
+    #[test]
+    fn num() {
+        assert_eq!("7", fizz_buzz(7))
     }
 }
